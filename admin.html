@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel de Achados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="painel-topo">
+  <strong>Painel de Achados</strong>
+  <div class="acoes">
+    <a class="botao escuro peq" href="./" target="_blank" rel="noopener">Abrir vitrine</a>
+    <button class="botao escuro peq escondido" id="sair" type="button">Sair</button>
+  </div>
+</header>
+
+<main class="painel" id="painel">
+  <!-- tela de conexão -->
+  <section class="caixa" id="tela-conexao">
+    <h2>Conectar ao GitHub</h2>
+    <p style="margin-top:0;line-height:1.55;color:var(--tinta-2)">O painel salva as ofertas direto no seu repositório. Isso precisa de uma <strong>chave de acesso</strong> (token) do GitHub, criada só pra este repositório.</p>
+    <form id="form-conexao" class="campos">
+      <label class="campo">Usuário do GitHub<input name="dono" required value="leandroalmeida12" autocomplete="off"></label>
+      <label class="campo">Repositório<input name="repo" required value="achados" autocomplete="off"></label>
+      <label class="campo largo">Token de acesso
+        <input name="token" type="password" required autocomplete="off" placeholder="github_pat_...">
+        <span class="ajuda">Crie em github.com → Settings → Developer settings → Personal access tokens → <strong>Fine-grained tokens</strong>. Em "Repository access" escolha só o repositório <strong>achados</strong> e em "Permissions → Contents" marque <strong>Read and write</strong>.</span>
+      </label>
+      <label class="marcar largo"><input type="checkbox" name="lembrar" checked>Lembrar neste aparelho</label>
+      <div class="erro-conexao aviso vermelho largo escondido" id="erro-conexao" role="alert"></div>
+      <div class="largo"><button class="botao prim" type="submit">Conectar</button></div>
+    </form>
+  </section>
+
+  <!-- aplicativo -->
+  <div id="app" class="escondido" style="display:flex;flex-direction:column;gap:18px">
+    <div class="abas" role="tablist" aria-label="Seções">
+      <button class="aba" role="tab" data-aba="ofertas" aria-selected="true" type="button">Ofertas</button>
+      <button class="aba" role="tab" data-aba="nova" aria-selected="false" type="button">+ Nova oferta</button>
+      <button class="aba" role="tab" data-aba="perfil" aria-selected="false" type="button">Perfil da vitrine</button>
+    </div>
+
+    <!-- lista -->
+    <section class="caixa" data-secao="ofertas">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+        <h2 style="margin:0">Ofertas</h2>
+        <span id="resumo" style="font-size:14px;color:var(--tinta-3)"></span>
+      </div>
+      <div class="tabela"><table>
+        <thead><tr><th></th><th>Nº</th><th>Produto</th><th>Preço</th><th>Na vitrine</th><th></th></tr></thead>
+        <tbody id="linhas"></tbody>
+      </table></div>
+    </section>
+
+    <!-- formulário -->
+    <section class="caixa escondido" data-secao="nova">
+      <h2 id="titulo-form">Nova oferta</h2>
+      <div class="aviso amarelo" style="margin-bottom:14px">Use sempre o <strong>link oficial de afiliado</strong> gerado no painel do Mercado Livre ou da Shopee, sem encurtar. Preço: copie exatamente o que aparece no anúncio agora.</div>
+      <form id="form-oferta" class="campos" novalidate>
+        <label class="campo">Loja
+          <select name="loja" required><option value="ml">Mercado Livre</option><option value="shopee">Shopee</option></select>
+        </label>
+        <label class="campo">Categoria
+          <input name="categoria" list="lista-categorias" placeholder="Ex.: Beleza" autocomplete="off">
+          <datalist id="lista-categorias"></datalist>
+        </label>
+        <label class="campo largo">Link de afiliado<input name="link" type="url" required placeholder="https://..." autocomplete="off"></label>
+        <label class="campo largo">Nome do produto<input name="titulo" required maxlength="140" placeholder="Como aparece no anúncio, de forma curta"></label>
+        <label class="campo">Preço atual (R$)<input name="preco" type="number" min="0" step="0.01" required inputmode="decimal"></label>
+        <label class="campo">Preço antigo (R$)<input name="preco_antigo" type="number" min="0" step="0.01" inputmode="decimal"><span class="ajuda">Opcional. Só se o anúncio mostrar o preço riscado.</span></label>
+        <label class="campo largo">Foto do produto (endereço da imagem)<input name="imagem" placeholder="https://... ou deixe em branco e envie a foto abaixo" autocomplete="off">
+          <span class="ajuda">No anúncio, clique com o botão direito na foto → "Copiar endereço da imagem". Ou envie um print abaixo.</span></label>
+        <label class="campo largo">Ou enviar foto do aparelho<input name="arquivo" type="file" accept="image/*"></label>
+        <label class="marcar largo"><input type="checkbox" name="destaque">Destacar no topo da vitrine</label>
+        <label class="marcar largo"><input type="checkbox" name="ativo" checked>Mostrar na vitrine</label>
+        <div class="aviso vermelho largo escondido" id="erro-form" role="alert"></div>
+        <div class="linha-botoes largo">
+          <button class="botao prim" type="submit" id="salvar-oferta">Salvar e publicar</button>
+          <button class="botao" type="button" id="cancelar-form">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- perfil -->
+    <section class="caixa escondido" data-secao="perfil">
+      <h2>Perfil da vitrine</h2>
+      <form id="form-perfil" class="campos">
+        <label class="campo largo">Nome<input name="nome" required maxlength="60"></label>
+        <label class="campo largo">Frase de apresentação<input name="bio" maxlength="160"></label>
+        <label class="campo">Instagram (sem @)<input name="instagram" autocomplete="off"></label>
+        <label class="campo">TikTok (sem @)<input name="tiktok" autocomplete="off"></label>
+        <div class="largo"><button class="botao prim" type="submit">Salvar perfil</button></div>
+      </form>
+    </section>
+
+    <!-- arte e legenda -->
+    <section class="caixa escondido" data-secao="arte">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+        <h2 style="margin:0" id="titulo-arte">Arte e legenda</h2>
+        <button class="botao peq" type="button" id="voltar-arte">Voltar às ofertas</button>
+      </div>
+      <div class="aviso vermelho escondido" id="erro-arte" role="alert"></div>
+      <div class="duas">
+        <div>
+          <h3>Artes prontas</h3>
+          <div class="previa-arte">
+            <div class="story"><canvas id="cv-story" width="1080" height="1920" aria-label="Arte para Stories e Reels"></canvas>
+              <div class="linha-botoes" style="margin-top:8px"><button class="botao peq prim" type="button" data-baixar="story">Baixar Stories/Reels</button></div></div>
+            <div class="feed"><canvas id="cv-feed" width="1080" height="1350" aria-label="Arte para o feed"></canvas>
+              <div class="linha-botoes" style="margin-top:8px"><button class="botao peq prim" type="button" data-baixar="feed">Baixar Feed</button></div></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <label class="campo">Legenda do Instagram<textarea id="leg-insta" rows="9"></textarea>
+            <button class="botao peq" type="button" data-copiar="leg-insta">Copiar</button></label>
+          <label class="campo">Legenda do TikTok<textarea id="leg-tiktok" rows="5"></textarea>
+            <button class="botao peq" type="button" data-copiar="leg-tiktok">Copiar</button></label>
+          <label class="campo">Roteiro do vídeo (15 a 25 segundos)<textarea id="roteiro" rows="9"></textarea>
+            <button class="botao peq" type="button" data-copiar="roteiro">Copiar</button></label>
+          <label class="campo">Link direto para o Story (figurinha de link)<input id="link-story" readonly>
+            <button class="botao peq" type="button" data-copiar="link-story">Copiar</button></label>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="admin.js"></script>
+</body>
+</html>

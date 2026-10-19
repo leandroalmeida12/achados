@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leandro Tech Achados</title>
+<meta name="description" content="Os melhores achados do Mercado Livre e da Shopee, garimpados todo dia.">
+<meta property="og:title" content="Leandro Tech Achados">
+<meta property="og:description" content="Os melhores achados do Mercado Livre e da Shopee. Procure pelo número do achado!">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23FF4F2E'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3ELT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="topo">
+  <div class="avatar" aria-hidden="true">LT</div>
+  <h1 id="nome">Leandro Tech Achados</h1>
+  <p id="bio">Os melhores achados do Mercado Livre e da Shopee, garimpados todo dia.</p>
+  <nav class="redes" id="redes" aria-label="Redes sociais"></nav>
+</header>
+
+<main class="miolo">
+  <section class="busca" aria-label="Encontrar achado">
+    <label class="rot" for="campo-busca">Viu um achado no vídeo? Digite o número ou o nome</label>
+    <div class="numero">
+      <input id="campo-busca" type="search" inputmode="search" placeholder="Ex.: 23 ou fone bluetooth" autocomplete="off">
+    </div>
+    <div class="chips" id="filtros" role="group" aria-label="Filtrar ofertas"></div>
+  </section>
+
+  <div class="info-lista">
+    <h2 id="titulo-lista">Achados do momento</h2>
+    <span id="contagem"></span>
+  </div>
+
+  <div class="grade" id="grade" aria-live="polite"></div>
+</main>
+
+<footer class="rodape">
+  Esta página tem links de afiliado: posso receber uma comissão quando você compra por eles, sem custo extra pra você.
+  Preços, cupons e estoque mudam rápido e são definidos pela loja. Confira sempre no site antes de finalizar a compra.
+</footer>
+
+<script src="vitrine.js"></script>
+</body>
+</html>
