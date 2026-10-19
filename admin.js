@@ -404,7 +404,7 @@
       `"${d >= 20 ? `Esse aqui tá com ${d}% de desconto e eu precisava te mostrar!` : 'Olha o achado que eu encontrei hoje!'}"`,
       '',
       'MOSTRAR (3 a 15s): 2 ou 3 detalhes que aparecem no anúncio',
-      `"É ${o.titulo.toLowerCase()}, tá saindo por ${reais(o.preco)} na ${loja}."`,
+      `"É ${o.titulo.toLowerCase()}, tá saindo por ${reais(o.preco)} ${o.loja === 'ml' ? 'no Mercado Livre' : o.loja === 'shopee' ? 'na Shopee' : 'na loja'}."`,
       '(mostre a foto do anúncio, as avaliações e um detalhe do produto)',
       '',
       'CHAMADA (15 a 20s): número grande na tela',
