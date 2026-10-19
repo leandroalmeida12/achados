@@ -66,7 +66,7 @@
           ${d >= 1 ? `<span class="de">${reais(o.preco_antigo)}</span>` : ''}
           ${o.preco ? `<span class="por">${reais(o.preco)}</span>` : ''}
         </div>
-        ${link ? `<a class="comprar" href="${esc(link)}" target="_blank" rel="sponsored noopener nofollow">Ver oferta ${o.loja === 'ml' ? 'no Mercado Livre' : o.loja === 'shopee' ? 'na Shopee' : 'na loja'}</a>` : ''}
+        ${link ? `<a class="comprar" href="${esc(link)}" target="_blank" rel="sponsored noopener nofollow">Ver oferta</a>` : ''}
         ${o.criado_em ? `<span class="data">Preço visto em ${dataCurta(o.criado_em)}. Pode mudar.</span>` : ''}
       </div>
     </article>`;
