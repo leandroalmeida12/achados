@@ -1,10 +1,11 @@
 {
-  "atualizado_em": null,
+  "atualizado_em": "2026-10-19T21:05:01.397Z",
   "perfil": {
     "nome": "Leandro Tech Achados",
-    "bio": "Os melhores achados do Mercado Livre e da Shopee, garimpados todo dia.",
+    "bio": "“Os melhores achados do Mercado Livre, garimpados todo dia.”",
     "instagram": "",
     "tiktok": "leandrotechachados"
   },
-  "ofertas": []
+  "ofertas": [],
+  "proximo_id": 1
 }
