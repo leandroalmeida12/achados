@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-19T21:17:20Z",
+  "atualizado_em": "2026-10-19T21:34:40Z",
   "perfil": {
     "nome": "Leandro Tech Achados",
     "bio": "Os melhores achados do Mercado Livre, garimpados todo dia.",
@@ -71,7 +71,124 @@
       "destaque": false,
       "ativo": true,
       "criado_em": "2026-10-19T21:17:20Z"
+    },
+    {
+      "id": 6,
+      "loja": "ml",
+      "categoria": "Moda e calçados",
+      "link": "https://meli.la/2KvWcuE",
+      "titulo": "Tênis Kappa Park 2.0 Original Unissex Caminhada e Academia",
+      "preco": 81.7,
+      "preco_antigo": 169.99,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_636204-MLB92283366432_092025-AB-tnis-kappa-park-20-original-unissex-caminhada-academia.webp",
+      "destaque": false,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:34:40Z"
+    },
+    {
+      "id": 7,
+      "loja": "ml",
+      "categoria": "Eletrônicos",
+      "link": "https://meli.la/1G9g8RF",
+      "titulo": "Kit 2 Câmeras de Segurança Wi-Fi Interna e Externa com Visão Noturna",
+      "preco": 198.93,
+      "preco_antigo": 349.0,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_694546-MLA117038112537_092026-AB.webp",
+      "destaque": false,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:34:40Z"
+    },
+    {
+      "id": 8,
+      "loja": "ml",
+      "categoria": "Esporte e fitness",
+      "link": "https://meli.la/1kkA3Rx",
+      "titulo": "Esteira Ergométrica Elétrica Dobrável Residencial",
+      "preco": 675.18,
+      "preco_antigo": 1499.0,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_773728-MLB116246249633_082026-AB.webp",
+      "destaque": false,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:34:40Z"
+    },
+    {
+      "id": 9,
+      "loja": "ml",
+      "categoria": "Moda e calçados",
+      "link": "https://meli.la/132UitB",
+      "titulo": "Tênis Kappa Pulse Unissex Academia e Caminhada",
+      "preco": 111.0,
+      "preco_antigo": 229.99,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_932856-MLB113427111477_062026-AB-tnis-kappa-pulse-unissex-academia-caminhada.webp",
+      "destaque": false,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:34:40Z"
+    },
+    {
+      "id": 10,
+      "loja": "ml",
+      "categoria": "Cozinha",
+      "link": "https://meli.la/2MTAPyn",
+      "titulo": "Kit 10 Potes de Vidro Marmita Hermética 640ml Borossilicato",
+      "preco": 99.79,
+      "preco_antigo": 174.0,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_628438-MLA116953128816_092026-AB.webp",
+      "destaque": false,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:34:40Z"
+    },
+    {
+      "id": 11,
+      "loja": "ml",
+      "categoria": "Escritório",
+      "link": "https://meli.la/2ksnsi4",
+      "titulo": "Cadeira de Escritório Ergonômica NR17 Mesh Giratória até 180kg",
+      "preco": 399.9,
+      "preco_antigo": 588.27,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_817671-MLA110181633795_042026-AB.webp",
+      "destaque": false,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:34:40Z"
+    },
+    {
+      "id": 12,
+      "loja": "ml",
+      "categoria": "Ferramentas",
+      "link": "https://meli.la/27jgTXU",
+      "titulo": "Parafusadeira Furadeira 48V Sem Fio com 2 Baterias",
+      "preco": 122.95,
+      "preco_antigo": 299.9,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_951617-MLB110943565198_052026-AB.webp",
+      "destaque": false,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:34:40Z"
+    },
+    {
+      "id": 13,
+      "loja": "ml",
+      "categoria": "Natal",
+      "link": "https://meli.la/25rxcTz",
+      "titulo": "Cordão de LED de Natal 1600 LEDs 50m à Prova d'Água",
+      "preco": 245.84,
+      "preco_antigo": 489.0,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_983056-MLA116660278091_082026-AB.webp",
+      "destaque": false,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:34:40Z"
+    },
+    {
+      "id": 14,
+      "loja": "ml",
+      "categoria": "Moda e calçados",
+      "link": "https://meli.la/1hXfHxX",
+      "titulo": "Kit 4 Shorts 2 em 1 Dry Fit Masculino com Compressão",
+      "preco": 85.49,
+      "preco_antigo": 142.0,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_878492-MLB108664426620_032026-AB-kit-4-shorts-2-em-1-duplo-dryfit-masculino-compresso-termic.webp",
+      "destaque": false,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:34:40Z"
     }
   ],
-  "proximo_id": 6
+  "proximo_id": 15
 }
