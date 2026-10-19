@@ -70,7 +70,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .comprar:hover { background: var(--coral-escuro); color: #fff; }
 .data { font-size: 12px; color: var(--tinta-3); }
 
-.vazio { background: var(--cartao); border-radius: var(--raio); padding: 36px 20px; text-align: center; color: var(--tinta-2); border: 1px dashed var(--linha); }
+.vazio { grid-column: 1 / -1; background: var(--cartao); border-radius: var(--raio); padding: 36px 20px; text-align: center; color: var(--tinta-2); border: 1px dashed var(--linha); }
 .vazio strong { display: block; font-family: var(--titulo); font-size: 20px; color: var(--tinta); margin-bottom: 6px; }
 
 .rodape { max-width: 960px; margin: 0 auto; padding: 0 16px 40px; font-size: 13px; color: var(--tinta-3); line-height: 1.55; text-align: center; }
