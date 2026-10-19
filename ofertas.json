@@ -1,11 +1,77 @@
 {
-  "atualizado_em": "2026-10-19T21:05:05.153Z",
+  "atualizado_em": "2026-10-19T21:17:20Z",
   "perfil": {
     "nome": "Leandro Tech Achados",
-    "bio": "“Os melhores achados do Mercado Livre, garimpados todo dia.”",
+    "bio": "Os melhores achados do Mercado Livre, garimpados todo dia.",
     "instagram": "",
     "tiktok": "leandrotechachados"
   },
-  "ofertas": [],
-  "proximo_id": 1
+  "ofertas": [
+    {
+      "id": 1,
+      "loja": "ml",
+      "categoria": "Casa e decoração",
+      "link": "https://meli.la/32rjdYv",
+      "titulo": "Lixeira Inteligente Automática com Sensor 16L Recarregável Anti Odor",
+      "preco": 57.26,
+      "preco_antigo": 157.98,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_926150-MLA111459071720_052026-AB.webp",
+      "destaque": true,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:17:20Z"
+    },
+    {
+      "id": 2,
+      "loja": "ml",
+      "categoria": "Automotivo",
+      "link": "https://meli.la/34aUPMQ",
+      "titulo": "Pulverizador Elétrico Snow Foam para Carro, Moto e Jardim 2L",
+      "preco": 79.25,
+      "preco_antigo": 249.98,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_746190-MLA116818615537_082026-AB.webp",
+      "destaque": false,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:17:20Z"
+    },
+    {
+      "id": 3,
+      "loja": "ml",
+      "categoria": "Beleza e cuidado pessoal",
+      "link": "https://meli.la/1EV59pK",
+      "titulo": "Perfume Club de Nuit Intense Armaf EDT 105ml Masculino",
+      "preco": 213.3,
+      "preco_antigo": 319.0,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_887864-MLB108264754941_032026-AB.webp",
+      "destaque": false,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:17:20Z"
+    },
+    {
+      "id": 4,
+      "loja": "ml",
+      "categoria": "Moda e calçados",
+      "link": "https://meli.la/1QXobUE",
+      "titulo": "Tênis Casual Kappa Zenit Unissex Conforto",
+      "preco": 99.99,
+      "preco_antigo": 229.99,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_974922-MLB118087970434_102026-AB-tnis-casual-kappa-zenit-masculino-unissex-conforto.webp",
+      "destaque": false,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:17:20Z"
+    },
+    {
+      "id": 5,
+      "loja": "ml",
+      "categoria": "Esporte e fitness",
+      "link": "https://meli.la/2f9xvxL",
+      "titulo": "Bicicleta Ergométrica Spinning 6kg Sevenfit para Cardio",
+      "preco": 460.74,
+      "preco_antigo": 1094.0,
+      "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_745785-MLA114987927277_072026-AB.webp",
+      "destaque": false,
+      "ativo": true,
+      "criado_em": "2026-10-19T21:17:20Z"
+    }
+  ],
+  "proximo_id": 6
 }
